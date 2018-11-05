@@ -50,7 +50,7 @@ onus:
   -
     serial: 'BRCM12345678'
   -
-    serial: 'BRCM12345679''
+    serial: 'BRCM12345679'
 
 srcHost:
   ip: '10.1.50.22'
