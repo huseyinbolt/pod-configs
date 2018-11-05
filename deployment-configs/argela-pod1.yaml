@@ -1,4 +1,4 @@
-# Copyright 2017-present Open Networking Foundation
+"# Copyright 2017-present Open Networking Foundation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,15 +20,15 @@ kube_config: '/var/lib/jenkins/workspace/seba_test/pod-configs/kubernetes-config
 
 nodes:
   -
-    ip: '10.1.50.6'
+    ip: '192.168.70.21'
     user: 'cord'
     pass: 'cord'
   -
-    ip: '10.1.50.9'
+    ip: '192.168.70.22'
     user: 'cord'
     pass: 'cord'
   -
-    ip: '10.1.50.17'
+    ip: '192.168.70.23'
     user: 'cord'
     pass: 'cord'
 
@@ -48,11 +48,9 @@ olts:
 
 onus:
   -
-    serial: 'ALPHe3d1cdea'
+    serial: 'BRCM12345678'
   -
-    serial: 'ALPHe3d1d006'
-  -
-    serial: 'ISKT71e81120'
+    serial: 'BRCM12345679''
 
 srcHost:
   ip: '10.1.50.22'
