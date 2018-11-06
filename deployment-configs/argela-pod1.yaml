@@ -16,7 +16,7 @@
 
 ---
 
-kube_config: '/var/jenkins_home/workspace/admin.conf'
+kube_config: '/var/jenkins_home/workspace/deploy-seba-argela/pod-configs/kubernetes-configs/argela-pod1.conf'
 
 nodes:
   -
