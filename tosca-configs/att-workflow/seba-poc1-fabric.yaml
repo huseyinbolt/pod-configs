@@ -23,7 +23,7 @@ imports:
   - custom_types/attworkflowdriverwhitelistentry.yaml
   - custom_types/attworkflowdriverservice.yaml
 
-description: Configures the ONF SEBA POD with AT&T workflow
+description: Configures a full R-CORD POD
 
 topology_template:
   node_templates:
@@ -32,18 +32,18 @@ topology_template:
       type: tosca.nodes.Switch
       properties:
         driver: ofdpa3
-        ipv4Loopback: 10.1.50.33
+        ipv4Loopback: 192.168.0.201
         ipv4NodeSid: 17
         isEdgeRouter: True
-        name: leaf_1
-        ofId: of:0000cc37abeacefa
+        name: Fabric Switch - Leaf1
+        ofId: of:0000000000000001
         routerMac: 00:00:02:01:06:01
 
     # Setup the OLT switch port
     port#olt_port:
       type: tosca.nodes.SwitchPort
       properties:
-        portId: 49
+        portId: 1
         host_learning: false
       requirements:
         - switch:
@@ -54,7 +54,7 @@ topology_template:
     port#bng_port:
       type: tosca.nodes.SwitchPort
       properties:
-        portId: 1
+        portId: 72
         host_learning: false
       requirements:
         - switch:
@@ -88,23 +88,12 @@ topology_template:
     #         node: service#att
     #         relationship: tosca.relationships.BelongsToOne
 
-    ALPHe3d1cdea:
+    BRCM12345678:
       type: tosca.nodes.AttWorkflowDriverWhiteListEntry
       properties:
-        serial_number: ALPHe3d1cdea
+        serial_number: BRCM12345678
         pon_port_id: 536870912
-        device_id: of:000000000a013213
-      requirements:
-        - owner:
-            node: service#att
-            relationship: tosca.relationships.BelongsToOne
-
-    ALPHe3d1d006:
-      type: tosca.nodes.AttWorkflowDriverWhiteListEntry
-      properties:
-        serial_number: ALPHe3d1d006
-        pon_port_id: 536870912
-        device_id: of:000000000a013213
+        device_id: of:0000a82bb5776679
       requirements:
         - owner:
             node: service#att

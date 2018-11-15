@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# curl -H "xos-username: admin@opencord.org" -H "xos-password: letmein" -X POST --data-binary @onlab-pod1-olt.yaml http://10.90.0.101:30007/run
+# curl -H "xos-username: admin@opencord.org" -H "xos-password: letmein" -X POST --data-binary @seba-poc1-olt.yaml http://10.192.4.241:30007/run
 
 tosca_definitions_version: tosca_simple_yaml_1_0
 imports:
@@ -32,16 +32,19 @@ topology_template:
     olt_device:
       type: tosca.nodes.OLTDevice
       properties:
-        name: ONF OLT
+        name: olt-1
         device_type: openolt
-        host: 10.1.50.19
+        host: 192.168.70.30
         port: 9191
-        switch_datapath_id: of:0000cc37abeacefa
-        switch_port: "49"
+        switch_datapath_id: of:0000a82bb5776679
+        switch_port: "1"
         outer_tpid: "0x8100"
-        uplink: "65536"
+        uplink: "128"
         nas_id: "NAS_ID"
       requirements:
         - volt_service:
             node: service#volt
             relationship: tosca.relationships.BelongsToOne
+
+
+
