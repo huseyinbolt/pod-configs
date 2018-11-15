@@ -16,7 +16,7 @@
 
 ---
 
-kube_config: '/var/lib/jenkins/workspace/seba_test/pod-configs/kubernetes-configs/netsia-pod1.conf'
+kube_config: '/var/jenkins_home/workspace/seba_test/pod-configs/kubernetes-configs/netsia-pod1.conf'
 
 nodes:
   -
