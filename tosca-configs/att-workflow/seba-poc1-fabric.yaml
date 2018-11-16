@@ -92,7 +92,7 @@ topology_template:
       type: tosca.nodes.AttWorkflowDriverWhiteListEntry
       properties:
         serial_number: BRCM12345678
-        pon_port_id: 16
+        pon_port_id: 536870912
         device_id: of:00000000c0a8461e
       requirements:
         - owner:
