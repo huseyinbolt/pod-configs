@@ -36,7 +36,7 @@ topology_template:
         device_type: openolt
         host: 192.168.70.30
         port: 9191
-        switch_datapath_id: of:00000000c0a8461e
+        switch_datapath_id: of:0000000000000001
         switch_port: "1"
         outer_tpid: "0x8100"
         uplink: "65536"
