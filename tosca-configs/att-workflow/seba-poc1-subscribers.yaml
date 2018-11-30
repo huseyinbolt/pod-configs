@@ -34,6 +34,6 @@ topology_template:
         circuit_id: foo3
         remote_id: bar3
         mac_address: 00:02:61:82:30:E5
-        c_tag: 100
-        s_tag: 10
+        c_tag: 33
+        s_tag: 7
 
