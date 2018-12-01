@@ -1,0 +1,26 @@
+{
+  "apps":{
+    "org.opencord.sadis":{
+      "sadis":{
+        "integration":{
+          "url":"http://10.233.102.143:8000/subscriber/%s",
+          "cache":{
+            "enabled":true,
+            "maxsize":20,
+            "ttl":"PT1m"
+          }
+        }
+      },
+      "bandwidthprofile" : {
+        "integration" : {
+          "url" : "http://localhost:8222/%s",
+          "cache":{
+            "enabled":true,
+            "maxsize":40,
+            "ttl":"PT1m"
+          }
+        }
+      }
+    }
+  }
+}
