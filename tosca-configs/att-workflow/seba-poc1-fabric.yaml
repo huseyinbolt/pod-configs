@@ -99,6 +99,17 @@ topology_template:
             node: service#att
             relationship: tosca.relationships.BelongsToOne
 
+    BRCM12345679:
+          type: tosca.nodes.AttWorkflowDriverWhiteListEntry
+          properties:
+            serial_number: BRCM12345679
+            pon_port_id: 536870912
+            device_id: of:00000000c0a8461e
+          requirements:
+            - owner:
+                node: service#att
+                relationship: tosca.relationships.BelongsToOne
+
     # ISKT71e801a0:
     #   type: tosca.nodes.AttWorkflowDriverWhiteListEntry
     #   properties:
