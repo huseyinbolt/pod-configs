@@ -46,7 +46,7 @@ topology_template:
             nas_port_id : "PON 1/1/06/1:1.1.1"
             circuit_id: foo3
             remote_id: bar3
-            mac_address:
+            mac_address: 00:02:61:A6:A7:81
             c_tag: 34
             s_tag: 7
 
