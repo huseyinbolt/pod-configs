@@ -81,7 +81,7 @@ topology_template:
           properties:
             serial_number: ISKT71E819A8
             pon_port_id: 536870912
-            device_id: of:00000000c0a8461e
+            device_id: of:00000000c0a81ffc
           requirements:
             - owner:
                 node: service#att
