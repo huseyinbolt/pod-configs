@@ -29,7 +29,7 @@ topology_template:
       properties:
         name: TestSubscriber
         status: pre-provisioned
-        onu_device: ISKT71E819A8
+        onu_device: ISKT71e819a8
         nas_port_id : "PON 1/1/05/1:1.1.1"
         circuit_id: foo3
         remote_id: bar3
