@@ -38,7 +38,7 @@ topology_template:
         ipv4NodeSid: 17
         isEdgeRouter: True
         name: AGG_SWITCH
-        ofId: of:0000000000000002
+        ofId: of:0000000000000001
         routerMac: 00:00:02:01:06:01
 
     # Setup the OLT switch port
@@ -105,7 +105,7 @@ topology_template:
       properties:
         serial_number: ISKT71E819A8
         pon_port_id: 536870912
-        device_id: of:00000000c0a81ffc
+        device_id: of:00010000c0a81ffc
       requirements:
         - owner:
             node: service#att
