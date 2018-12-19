@@ -57,13 +57,13 @@ srcHost:
 
 hosts:
   src:
-    ip: '10.1.50.22'
-    user: 'cord'
-    pass: 'cord'
+    ip: '192.168.31.253'
+    user: 'argela'
+    pass: '1234'
     interface: 'eno3'
     dp_iface_name: 'eno2'
     #container_type: 'LXC'
     #container_name: 'ALPHe3d1cfde'
 
   dst:
-    dp_iface_ip_qinq: '10.11.2.254'
+    dp_iface_ip_qinq: 'www.google.com'
