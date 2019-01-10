@@ -36,8 +36,8 @@ topology_template:
         device_type: openolt
         host: 192.168.31.252
         port: 9191
-        switch_datapath_id: of:0000000000000001 #Fabic Switch DPID
-        switch_port: "1"
+        switch_datapath_id: of:0000000000000002 #Fabic Switch DPID
+        switch_port: "51"
         outer_tpid: "0x8100"
         uplink: "65536"
         nas_id: "NAS_ID"
