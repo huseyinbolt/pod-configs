@@ -78,11 +78,11 @@ topology_template:
     port#olt_port:
       type: tosca.nodes.SwitchPort
       properties:
-        portId: 1
+        portId: 51
         host_learning: false
       requirements:
         - switch:
-            node: switch#leaf_1
+            node: switch#leaf_2
             relationship: tosca.relationships.BelongsToOne
 
     # Port connected to the BNG
