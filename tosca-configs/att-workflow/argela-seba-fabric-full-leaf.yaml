@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# curl -H "xos-username: admin@opencord.org" -H "xos-password: letmein" -X POST --data-binary @onlab-pod2-argela-seba-fabric.yaml http://10.90.0.120:30007/run
+# curl -H "xos-username: admin@opencord.org" -H "xos-password: letmein" -X POST --data-binary @onlab-pod2-argela-seba-fabric-full-leaf.yaml http://10.90.0.120:30007/run
 
 tosca_definitions_version: tosca_simple_yaml_1_0
 imports:
@@ -37,19 +37,52 @@ topology_template:
         ipv4Loopback: 192.168.0.201
         ipv4NodeSid: 17
         isEdgeRouter: True
-        name: AGG_SWITCH
-        ofId: of:0000000000000001 #Leaf Switch DPID
+        name: Fabric Switch - Leaf1
+        ofId: of:0000000000000001
         routerMac: 00:00:02:01:06:01
+
+    switch#leaf_2:
+      type: tosca.nodes.Switch
+      properties:
+        driver: ofdpa3
+        ipv4Loopback: 192.168.0.202
+        ipv4NodeSid: 18
+        isEdgeRouter: True
+        name: Fabric Switch - Leaf2
+        ofId: of:0000000000000002
+        routerMac: 00:00:02:01:06:02
+
+    switch#spine_1:
+      type: tosca.nodes.Switch
+      properties:
+        driver: ofdpa3
+        ipv4Loopback: 192.168.0.203
+        ipv4NodeSid: 19
+        isEdgeRouter: False
+        name: Fabric Switch - Spine1
+        ofId: of:0000000000001111
+        routerMac: 00:00:02:01:06:03
+
+    switch#spine_2:
+      type: tosca.nodes.Switch
+      properties:
+        driver: ofdpa3
+        ipv4Loopback: 192.168.0.204
+        ipv4NodeSid: 20
+        isEdgeRouter: False
+        name: Fabric Switch - Spine2
+        ofId: of:0000000000001112
+        routerMac: 00:00:02:01:06:04
 
     # Setup the OLT switch port
     port#olt_port:
       type: tosca.nodes.SwitchPort
       properties:
-        portId: 1
+        portId: 51
         host_learning: false
       requirements:
         - switch:
-            node: switch#leaf_1
+            node: switch#leaf_2
             relationship: tosca.relationships.BelongsToOne
 
     # Port connected to the BNG
