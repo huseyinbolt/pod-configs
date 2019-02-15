@@ -6,5 +6,5 @@
 # application_logs: |
 #   log4j.logger.org.opencord.olt = DEBUG
 #   log4j.logger.org.opencord.kafka = DEBUG
-#   log4j.logger.org.opencord.sadis = DEBUG
+##   log4j.logger.org.opencord.sadis = DEBUG
 #   log4j.logger.org.opencord.aaa = DEBUG
