@@ -34,7 +34,7 @@ topology_template:
       properties:
         name: EdgeCore OLT
         device_type: openolt
-        host: 192.168.31.252
+        host: 192.168.250.41
         port: 9191
         switch_datapath_id: of:0000000000000001 #Fabic Switch DPID
         switch_port: "1"
