@@ -105,7 +105,7 @@ topology_template:
       properties:
         serial_number: BRCM12345679
         pon_port_id: 536870912
-        device_id: of:00000000c0a81ffc #OLT OpenFlow ID
+        device_id: of:00000000c0a8fa29 #OLT OpenFlow ID
       requirements:
         - owner:
             node: service#att
