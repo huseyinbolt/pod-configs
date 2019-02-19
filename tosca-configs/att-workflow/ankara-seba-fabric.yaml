@@ -100,10 +100,10 @@ topology_template:
         name: att-workflow-driver
         must-exist: true
 
-    BRCM12345679:
+    BRCM12345678:
       type: tosca.nodes.AttWorkflowDriverWhiteListEntry
       properties:
-        serial_number: BRCM12345679
+        serial_number: BRCM12345678
         pon_port_id: 536870912
         device_id: of:00000000c0a8fa29 #OLT OpenFlow ID
       requirements:

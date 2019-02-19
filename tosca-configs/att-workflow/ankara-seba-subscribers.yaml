@@ -29,7 +29,7 @@ topology_template:
       properties:
         name: TestSubscriber
         status: pre-provisioned
-        onu_device: BRCM12345679
+        onu_device: BRCM12345678
         nas_port_id : "PON 1/1/05/1:1.1.1"
         circuit_id: foo3
         remote_id: bar3
