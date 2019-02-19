@@ -48,7 +48,7 @@ olts:
 
 onus:
   -
-    serial: 'BRCM123456789'
+    serial: 'BRCM12345679'
   -
     serial: 'ALPHe3d1d006'
   -
