@@ -1,0 +1,10 @@
+# SEBA Values
+
+#global:
+#  registry: '192.168.31.203:5000/'
+
+# application_logs: |
+#   log4j.logger.org.opencord.olt = DEBUG
+#   log4j.logger.org.opencord.kafka = DEBUG
+#   log4j.logger.org.opencord.sadis = DEBUG
+#   log4j.logger.org.opencord.aaa = DEBUG
