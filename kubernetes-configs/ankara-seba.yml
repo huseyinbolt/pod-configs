@@ -1,7 +1,18 @@
 # SEBA Values
 
-#global:
-#  registry: '192.168.31.203:5000/'
+envoyForEtcdImage: 'voltha/voltha-envoy:amsterdam'
+netconfImage: 'voltha/voltha-netconf:amsterdam'
+ofagentImage: 'voltha/voltha-ofagent:amsterdam'
+vcliImage: 'voltha/voltha-cli:amsterdam'
+vcoreImage: 'voltha/voltha-voltha:amsterdam'
+
+onosImage: 'onosproject/onos:1.13.5'
+
+xos_coreImage: 'xosproject/xos-core:2.1.0'
+fabric:
+  fabric_synchronizerImage: 'xosproject/fabric-synchronizer:2.1.0'
+att-workflow-driver:
+  attWorkflowDriver_synchronizerImage: 'xosproject/att-workflow-driver-synchronizer:1.0.0'
 
 # application_logs: |
 #   log4j.logger.org.opencord.olt = DEBUG
