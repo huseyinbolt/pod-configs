@@ -36,3 +36,16 @@ topology_template:
         mac_address: E4:11:5B:26:7B:EA
         c_tag: 33
         s_tag: 7
+
+    my_house2:
+          type: tosca.nodes.RCORDSubscriber
+          properties:
+            name: TestSubscriber
+            status: pre-provisioned
+            onu_device: BRCM12345679
+            nas_port_id : "PON 1/1/05/1:1.1.2"
+            circuit_id: foo4
+            remote_id: bar5
+            mac_address: E4:11:5B:26:7B:E1
+            c_tag: 33
+            s_tag: 7
