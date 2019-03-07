@@ -38,7 +38,7 @@ topology_template:
         ipv4NodeSid: 17
         isEdgeRouter: True
         name: AGG_SWITCH
-        ofId: of:0000000000000001 #Leaf Switch DPID
+        ofId: of:0000000000001111 #Leaf Switch DPID
         routerMac: 00:00:02:01:06:01
 
     switch#leaf_2:
@@ -67,7 +67,7 @@ topology_template:
     port#bng_port:
       type: tosca.nodes.SwitchPort
       properties:
-        portId: 72
+        portId: 70
       requirements:
         - switch:
             node: switch#leaf_1
@@ -79,7 +79,7 @@ topology_template:
       type: tosca.nodes.BNGPortMapping
       properties:
         s_tag: any
-        switch_port: 72
+        switch_port: 70
 
     # DHCP L2 Relay config
     onos_app#dhcpl2relay:
@@ -96,7 +96,7 @@ topology_template:
           {
             "dhcpl2relay" : {
               "useOltUplinkForServerPktInOut" : false,
-              "dhcpServerConnectPoints" : [ "of:0000000000000001/72" ]
+              "dhcpServerConnectPoints" : [ "of:0000000000001111/70" ]
             }
           }
       requirements:
